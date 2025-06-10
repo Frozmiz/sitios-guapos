@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase tailwind</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body>
+    <header class="flex items-center justify-between bg-cyan-200 shadow-lg">
+      <h1 class="p-4 font-mono font-bold">Donde pollas voy...?</h1>
+      <nav id="mainNav" class="hidden md:flex">
+        <ul class="flex gap-4">
+          <li class="p-4 hover:text-white hover:bg-emerald-600">
+            <a href="#">Inicio</a>
+          </li>
+          <li class="p-4 hover:text-white hover:bg-emerald-600">
+            <a href="#"> Medio</a>
+          </li>
+          <li class="p-4 hover:text-white hover:bg-emerald-600">
+            <a href="#"> Final</a>
+          </li>
+        </ul>
+      </nav>
+      <button id="mobile-nav-btn" class="block md:hidden p-2">
+        <span class="block w-6 h-[2px] bg-black mb-1"></span>
+        <span class="block w-6 h-[2px] bg-black mb-1"></span>
+        <span class="block w-6 h-[2px] bg-black mb-1"></span>
+      </button>
+    </header>
+    <main>
+      <section
+        class="flex md:flex-row items-center justify-around flex-wrap bg-gradient-to-r from-primary to-secondary text-primary-foreground py-12 text-center md:text-left"
+      >
+        <h2 class="text-4xl md:text-5xl p-6 font-sans">
+          Welcome to sitios guapos que visitar
+        </h2>
+        <p class="text-xl mb-6 p-4 md:p-2">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolores
+          reiciendis temporibus cumque beatae molestias velit, vel officiis eos
+          perspiciatis? Ipsam voluptas provident consequatur mollitia est
+          delectus laborum? Adipisci, nostrum. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Porro fugit est dolorum, nam a harum in
+          consectetur libero omnis id quisquam praesentium quia totam dolores
+          enim consequatur, molestias, repellendus accusantium? Lorem ipsum,
+          dolor sit amet consectetur adipisicing elit. Saepe harum quisquam
+          aliquid veritatis consequuntur tenetur laborum quae architecto,
+          corporis quia quaerat consectetur distinctio. Nulla odit non dicta
+          debitis perferendis maxime?
+        </p>
+
+        <span class="block w-40 h-[2px] bg-black mt-10 m-10"></span>
+
+        <p class="text-xl mb-6 p-4 md:p-2">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolores
+          reiciendis temporibus cumque beatae molestias velit, vel officiis eos
+          perspiciatis? Ipsam voluptas provident consequatur mollitia est
+          delectus laborum? Adipisci, nostrum. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit.
+        </p>
+
+        <figure class="flex flex-col p-3 mx-auto border-3 border-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 rounded-xl shadow-lg">
+          <img src="/src/assets/cascada.png" alt="" class="" />
+          <figcaption class="text-center italic font-serif w-30 mt-2 rounded "></figcaption>
+            Cascadote del copón divino abe <span class="text-xs underline underline-offset-1">(Not in Sevilla)</span>
+          </figcaption>
+        </figure>
+
+        <button class="flex md:flex-row gap-4 p-5">
+          <a
+            class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary"
+            href="#"
+            >Montañas</a
+          >
+          <a
+            class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary"
+            href="#"
+            >Pueblos</a
+          >
+          <a
+            class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary"
+            href="#"
+            >Rios</a
+          >
+          <a
+            class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary"
+            href="#"
+            >Cascadas</a
+          >
+          <a
+            class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary"
+            href="#"
+            >Termas</a
+          >
+        </button>
+      </section>
+    </main>
+    <footer class="h-[0.1rem]">
+      <figure class="bg-gradient-to-r from-primary to-secondary">
+        <img
+          src="/src/assets/cespe.png"
+          alt="Green grassy field stretches across the entire bottom of the page, evoking a calm and peaceful atmosphere. No visible text in the image. The environment suggests an open outdoor space."
+          class="w-full h-full"
+        />
+      </figure>
+    </footer>
+
+    <script>
+      const menuBtn = document.querySelector("#mobile-nav-btn");
+      const nav = document.querySelector("#mainNav");
+
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
